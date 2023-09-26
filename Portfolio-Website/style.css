@@ -247,6 +247,10 @@ h2 span {
   scale: 1.05;
 }
 
+#age{
+color: black;
+}
+
 @media screen and (max-width: 800px) {
   .about {
     flex-direction: column;
