@@ -61,6 +61,27 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+
+// calculating age
+
+function calculateAge() {
+  // Enter your birthdate in the format "YYYY-MM-DD"
+  const birthdate = new Date("2001-06-16");
+  const currentDate = new Date();
+  const ageInMilliseconds = currentDate - birthdate;
+
+  const millisecondsInYear = 1000 * 60 * 60 * 24 * 365.25;
+  const age = Math.floor(ageInMilliseconds / millisecondsInYear);
+
+  document.getElementById("age").textContent = age;
+}
+
+// Call calculateAge initially
+calculateAge();
+
+// Update age every year
+setInterval(calculateAge, 1000 * 60 * 60 * 24 * 365.25);
+
 // JavaScript code to scroll to the top of the page
 
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
